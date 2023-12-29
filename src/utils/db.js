@@ -1,8 +1,4 @@
-/* eslint-disable max-len */
 import { Sequelize } from 'sequelize';
-// import 'dotenv/config';
-
-export const sequelize = new Sequelize('postgres://tardiemz:9unqUYttcFk-RPMa-dVWFfvqvEWL2N6M@cornelius.db.elephantsql.com/tardiemz');
 
 // export const sequelize = new Sequelize({
 //   dialect: 'postgres',
@@ -11,4 +7,9 @@ export const sequelize = new Sequelize('postgres://tardiemz:9unqUYttcFk-RPMa-dVW
 //   username: process.env.POSTGRES_USER,
 //   password: process.env.POSTGRES_PASSWORD,
 //   logging: false,
+//   define: {
+//     underscored: false,
+//   },
 // });
+
+export const sequelize = new Sequelize(process.env.ELEPHANT_SQL_URL);
